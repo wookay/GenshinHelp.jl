@@ -1,0 +1,14 @@
+name = "GenshinHelp"
+uuid = "d7ccf301-f71d-49d9-ab47-99bb49bd8dbe"
+authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "Jive"]
