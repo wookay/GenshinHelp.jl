@@ -3,7 +3,11 @@ uuid = "d7ccf301-f71d-49d9-ab47-99bb49bd8dbe"
 authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
 version = "0.1.0"
 
+[deps]
+StringDistances = "88034a9c-02f8-509d-84a9-84ec65e18404"
+
 [compat]
+StringDistances = "0.10"
 julia = "1"
 
 [extras]
