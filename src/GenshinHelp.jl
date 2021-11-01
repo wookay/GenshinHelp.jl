@@ -1,5 +1,6 @@
 module GenshinHelp
 
-greet() = print("Hello World!")
+include("genshin-db/getdata.jl")
+include("genshin-db/require.jl")
 
-end # module
+end # module GenshinHelp
