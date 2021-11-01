@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "genshin-db": "^3.11.2"
+  }
+}
