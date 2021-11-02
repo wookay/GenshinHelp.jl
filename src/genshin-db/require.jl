@@ -26,6 +26,6 @@ function load_json_data(; loads=(:alldata,
 end
 
 GenshinHelp.load_json_data()
-# GenshinHelp.load_json_data(; loads=(:allindex,))
+# GenshinHelp.load_json_data(; loads=(:alldata, :allindex, :allimage, :allurl))
 
 # module GenshinHelp
