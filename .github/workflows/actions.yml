@@ -25,6 +25,5 @@ jobs:
       - name: test js
         run: |
              cd test/genshin-db
-             npm ci
              make deps
              make
