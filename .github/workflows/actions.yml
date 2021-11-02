@@ -19,11 +19,11 @@ jobs:
       - uses: julia-actions/setup-julia@latest
         with:
           version: ${{ matrix.julia-version }}
-      - name: runtests
-        run: |
-             julia --project=. -e 'using Pkg; Pkg.test()'
       - name: test js
         run: |
              cd test/genshin-db
              make deps
              make
+      - name: runtests
+        run: |
+             julia --project=. -e 'using Pkg; Pkg.test()'
