@@ -22,7 +22,6 @@ jobs:
       - name: runtests
         run: |
              julia --project=. -e 'using Pkg; Pkg.test()'
-    steps:
       - name: test js
         run: |
              cd test/genshin-db

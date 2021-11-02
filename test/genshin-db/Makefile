@@ -1,5 +1,5 @@
 all:
-	node runtests.js	
+	node runtests.js
 
 deps:
 	npm install --save genshin-db
