@@ -25,8 +25,18 @@ const calcStatsMap = Dict(
     "weapons" => calcStatsWeapon
 )
 
+function setAttributesTalent(data, filename)
+    myparams = getStats("talents", filename)
+    for prop in ("combat1", "combat2", "combatsp", "combat3")
+        !haskey(myparams, prop) && continue
+        data_prop::Dict = data[prop]
+        data_prop_attributes::Dict = data_prop["attributes"]
+        data_prop_attributes["parameters"] = myparams[prop]
+    end
+end
+
 function getData(lang, folder, filename)
-    tmp = Dict(alldata[lang][folder][filename])
+    tmp::Dict = alldata[lang][folder][filename]
     if !haskey(tmp, "images") && folder in availableimage
         tmp["images"] = getImage(folder, filename)
     end

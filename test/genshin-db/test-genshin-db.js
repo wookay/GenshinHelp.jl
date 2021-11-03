@@ -16,7 +16,10 @@ Test.test_genshindb_options = function() {
 }
 
 Test.test_genshindb_characters = function() {
-    assert_true(genshindb.characters("lisa")["name"] == "Lisa")
+    const lisa = genshindb.characters("lisa")
+    const lisa_kr = genshindb.characters("리사", { queryLanguages: ["Korean"]})
+    assert_true(lisa["name"] == "Lisa")
+    assert_true(lisa_kr["name"] == "Lisa")
 }
 
 Test.test_genshindb_talents = function() {
@@ -51,7 +54,7 @@ Test.test_genshindb_weapons = function() {
 }
 
 Test.test_genshindb_weaponmaterialtypes = function() {
-    assert_equal(genshindb.weaponmaterialtype("Mondstadt", { matchCategories: true }), [ "Boreal Wolf", "Dandelion Gladiator", "Decarabian" ])
+    assert_equal(genshindb.weaponmaterialtypes("Mondstadt", { matchCategories: true }), [ "Boreal Wolf", "Dandelion Gladiator", "Decarabian" ])
 }
 
 Test.test_genshindb_materials = function() {
@@ -87,7 +90,7 @@ Test.test_genshindb_domains = function() {
     ])
 }
 
-Test.test_genshindb_enemie = function() {
+Test.test_genshindb_enemies = function() {
     assert_true(genshindb.enemies("boss", { matchCategories: true }).includes("La Signora"))
     assert_true(genshindb.enemies("La Signora").type == "BOSS")
 }
